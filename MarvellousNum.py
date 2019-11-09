@@ -12,6 +12,6 @@ def checkprime(n):
 			boolresult = True;
 			# print(n, " is a Prime Number");
 	else:
-		return boolresult;
+		boolresult = True;
 		# print(n, " is a Prime Number");
-	
+	return boolresult;
