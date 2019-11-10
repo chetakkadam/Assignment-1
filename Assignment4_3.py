@@ -10,18 +10,6 @@ def AcceptData():
 		arr.append(element);
 	return arr;
 	
-def CalcProduct(numlist):
-	product = 1;
-	productlist = list();
-	for i in range(0, len(numlist)):
-		n = numlist[i];
-		while(n != 0):
-			product = product * (n%10);
-			n = n//10;
-		productlist.append(product);
-		return product;
-	
-
 def main():
 	rawlist = AcceptData();
 	print(rawlist);
@@ -29,7 +17,8 @@ def main():
 	print(FilterList);
 	ModifiedList = list(map(lambda x:(x+10), FilterList));
 	print(ModifiedList);
-	ProductList = reduce(CalcProduct, ModifiedList);
+	ProductList = reduce((lambda x, y: x * y) ,ModifiedList);
+	# ProductList = list(reduce(CalcProduct(ModifiedList), ModifiedList));
 	print(ProductList);
 
 if __name__ == "__main__":
