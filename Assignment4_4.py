@@ -14,7 +14,7 @@ def main():
     print(userdata);
     FilterData = list(filter(lambda x: (x % 2 == 0),userdata));
     print(FilterData);
-    ModifiedData = list(map(lambda x:(pow(2,x)),FilterData));
+    ModifiedData = list(map(lambda x:pow(x,2),FilterData));
     print(ModifiedData);
     Finaldata = reduce(lambda x,y: (x + y), ModifiedData);
     print(Finaldata);
